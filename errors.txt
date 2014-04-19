@@ -1,0 +1,128 @@
+
+==> /tmp/BEGIERDE DES ZAUBERER .err <==
+
+==> /tmp/Botty Bug.err <==
+
+/Users/zmbush/LightBikes/public/js/board.js:106
+  return this.get_hex_at(coord).transform();
+                                ^
+TypeError: Cannot call method 'transform' of null
+  at Object.Board.transform_coord (/Users/zmbush/LightBikes/public/js/board.js:106:33)
+  at Object.Board._get_dist (/Users/zmbush/LightBikes/public/js/board.js:111:19)
+  at Object.Board.get_dist (/Users/zmbush/LightBikes/public/js/board.js:117:10)
+  at evalmachine.<anonymous>:5:29
+  at Function.map (/Users/zmbush/LightBikes/node_modules/lodash-node/modern/collections/map.js:59:23)
+  at evalmachine.<anonymous>:4:17
+  at request (/Users/zmbush/LightBikes/botResponder.coffee:55:3)
+  at Socket.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:73:9)
+  at Socket.EventEmitter.emit (events.js:95:17)
+  at Socket.<anonymous> (_stream_readable.js:746:14)
+  at Socket.EventEmitter.emit (events.js:92:17)
+  at emitReadable_ (_stream_readable.js:408:10)
+  at emitReadable (_stream_readable.js:404:5)
+  at readableAddChunk (_stream_readable.js:165:9)
+  at Socket.Readable.push (_stream_readable.js:127:10)
+  at Pipe.onread (net.js:528:21)
+
+
+==> /tmp/BreakdancingTrees.err <==
+
+==> /tmp/Buggy Bot.err <==
+
+evalmachine.<anonymous>:42
+		window.floodFillCount++;
+		^
+ReferenceError: window is not defined
+    at floodFill (evalmachine.<anonymous>:42:3)
+    at bestMove (evalmachine.<anonymous>:26:4)
+    at evalmachine.<anonymous>:6:7
+    at request (/Users/zmbush/LightBikes/botResponder.coffee:65:12)
+    at Socket.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:87:11)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:746:14)
+    at Socket.EventEmitter.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:408:10)
+    at emitReadable (_stream_readable.js:404:5)
+
+==> /tmp/Gen1.err <==
+
+==> /tmp/Hihihi.err <==
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: write EPIPE
+  at errnoException (net.js:904:11)
+  at Object.afterWrite (net.js:720:19)
+
+
+==> /tmp/It'll all be ogre soon.err <==
+ReferenceError: asdf is not defined
+    at evalmachine.<anonymous>:1:1
+    at Object.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:57:6)
+    at Object.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:102:4)
+    at Module._compile (module.js:456:26)
+    at Object.exports.run (/Users/zmbush/LightBikes/node_modules/coffee-script/lib/coffee-script/coffee-script.js:119:23)
+    at compileScript (/Users/zmbush/LightBikes/node_modules/coffee-script/lib/coffee-script/command.js:207:29)
+    at compilePath (/Users/zmbush/LightBikes/node_modules/coffee-script/lib/coffee-script/command.js:160:14)
+    at Object.exports.run (/Users/zmbush/LightBikes/node_modules/coffee-script/lib/coffee-script/command.js:95:21)
+    at Object.<anonymous> (/Users/zmbush/LightBikes/node_modules/coffee-script/bin/coffee:7:41)
+    at Module._compile (module.js:456:26)
+
+==> /tmp/MunimAli.err <==
+
+evalmachine.<anonymous>:69
+  window.me = me;
+  ^
+ReferenceError: window is not defined
+    at evalmachine.<anonymous>:69:3
+    at request (/Users/zmbush/LightBikes/botResponder.coffee:65:12)
+    at Socket.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:87:11)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:746:14)
+    at Socket.EventEmitter.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:408:10)
+    at emitReadable (_stream_readable.js:404:5)
+    at readableAddChunk (_stream_readable.js:165:9)
+    at Socket.Readable.push (_stream_readable.js:127:10)
+
+==> /tmp/PenguinBot.err <==
+
+==> /tmp/Sitting Ducks.err <==
+
+==> /tmp/Team Jerry.err <==
+
+==> /tmp/Tsundere.err <==
+
+/Users/zmbush/LightBikes/public/js/board.js:106
+  return this.get_hex_at(coord).transform();
+                                ^
+TypeError: Cannot call method 'transform' of null
+  at Object.Board.transform_coord (/Users/zmbush/LightBikes/public/js/board.js:106:33)
+  at Object.Board._get_dist (/Users/zmbush/LightBikes/public/js/board.js:111:19)
+  at Object.Board.get_dist (/Users/zmbush/LightBikes/public/js/board.js:117:10)
+  at eval (evalmachine.<anonymous>:16:26)
+  at evalmachine.<anonymous>:12:14
+  at Function.map (/Users/zmbush/LightBikes/node_modules/lodash-node/modern/collections/map.js:59:23)
+  at evalmachine.<anonymous>:10:20
+  at request (/Users/zmbush/LightBikes/botResponder.coffee:55:3)
+  at Socket.<anonymous> (/Users/zmbush/LightBikes/botResponder.coffee:73:9)
+  at Socket.EventEmitter.emit (events.js:95:17)
+  at Socket.<anonymous> (_stream_readable.js:746:14)
+  at Socket.EventEmitter.emit (events.js:92:17)
+  at emitReadable_ (_stream_readable.js:408:10)
+  at emitReadable (_stream_readable.js:404:5)
+  at readableAddChunk (_stream_readable.js:165:9)
+  at Socket.Readable.push (_stream_readable.js:127:10)
+  at Pipe.onread (net.js:528:21)
+
+
+==> /tmp/bouldy.err <==
+
+==> /tmp/display.err <==
+
+==> /tmp/handsome-taco.err <==
+
+==> /tmp/nkouevda.err <==
+
+==> /tmp/rob-bot.err <==

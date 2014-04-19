@@ -145,7 +145,7 @@ Models.Team.findAll()
 
     cmd = get_cmd(p)
     console.log("Starting: #{cmd}")
-    p.proc = exec(cmd + " 2>&1", {async: true})
+    p.proc = exec(cmd + " 2> \"/tmp/#{p.name.replace(/"/g, "\\\"")}.err\"", {async: true})
 
     Bot.register(p.name, (game_state, player_state, move) ->
       if (p.strikes < 3)
