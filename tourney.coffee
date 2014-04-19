@@ -47,6 +47,8 @@ PARTICIPANTS =
     name: "FleeBot",
     file: "./example-bots/flee-bot.js"
 
+PARTICIPANTS = {}
+
 MATCHES = []
 
 say = (category, message) ->
@@ -72,7 +74,7 @@ run_match = (p1, p2, callback) ->
   say('match', "#{p1.name} vs. #{p2.name}")
 
   g = new Game([p1.name, p2.name], true)
-  g.run((result) ->
+  g.run((result, moves) ->
     p1.score += result[0]
     p2.score += result[1]
 
@@ -181,7 +183,7 @@ Models.Team.findAll()
           c.end()
           p.strikes += 1
           move()
-        , 1000)
+        , 10000)
 
       else
         move()

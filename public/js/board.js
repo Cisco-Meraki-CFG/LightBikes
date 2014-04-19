@@ -19,7 +19,7 @@ Board.prototype.get_hex_at = function(coord) {
   var x = coord.x;
   var y = coord.y;
   if (this.hexes[y] && this.hexes[y][x]) {
-    return this.hexes[y][x];
+    return _.extend(this.hexes[y][x], Hex.prototype);
   } else {
     return null;
   }

@@ -4,9 +4,11 @@ window.Hex = function(x, y) {
   this.wall = false;
   this.crash_site = false;
   this.player = null;
-  this.hex = new createjs.Shape();
-  this.text = new createjs.Text(this.to_string(), "8px Arial", "black");
-}
+  if (typeof createjs !== 'undefined') {
+    this.hex = new createjs.Shape();
+    this.text = new createjs.Text(this.to_string(), "8px Arial", "black");
+  }
+};
 
 Hex.prototype.transform = function() {
   var new_y = this.y + Math.floor(this.x / 2.0);
@@ -21,6 +23,7 @@ Hex.prototype.to_string = function() {
 };
 
 Hex.prototype.draw = function(stage, radius) {
+  if (!this.hex) return;
   var thickness = 1;
   var color = 'white';
   if (this.wall) {
@@ -40,27 +43,27 @@ Hex.prototype.draw = function(stage, radius) {
   var h_rad = 0.5*radius;
   var hex_halfheight = Math.sqrt(radius*radius - h_rad*h_rad);
   this.hex.x = padding + radius + (this.x * radius * 1.5);
-  this.hex.y = padding + hex_halfheight + (2*hex_halfheight * this.y) + (this.x % 2 == 0 ? hex_halfheight : 0);
+  this.hex.y = padding + hex_halfheight + (2*hex_halfheight * this.y) + (this.x % 2 === 0 ? hex_halfheight : 0);
   stage.addChild(this.hex);
 
   if (this.player && !this.wall && !this.crash_site) {
-    this.player.circle.x = this.hex.x;    
-    this.player.circle.y = this.hex.y;    
+    this.player.circle.x = this.hex.x;
+    this.player.circle.y = this.hex.y;
     this.player.circle.graphics.beginFill(this.player.color)
                    .drawCircle(0, 0, hex_halfheight / 2);
     stage.addChild(this.player.circle);
   }
   this.text.x = this.hex.x - (0.7 * radius);
-  this.text.y = this.hex.y - (radius * .6);
+  this.text.y = this.hex.y - (radius * 0.6);
   this.textAlign = "center";
   stage.addChild(this.text);
-}
+};
 
 Hex.prototype.setPlayer = function(p) {
   this.player = p;
-}
+};
 
 Hex.prototype.setWall = function() {
   this.wall = true;
-}
+};
 
