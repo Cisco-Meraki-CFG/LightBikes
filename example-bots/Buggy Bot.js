@@ -1,4 +1,4 @@
-Bot.register('DummyBot', function(board_state, player_state, move){
+Bot.register('Buggy Bot', function(board_state, player_state, move){
 	console.log("started");
 
 	var me = board_state.me;

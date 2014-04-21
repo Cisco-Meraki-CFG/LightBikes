@@ -183,7 +183,7 @@ Models.Team.findAll()
           c.end()
           p.strikes += 1
           move()
-        , 10000)
+        , 60000)
 
       else
         move()
@@ -196,18 +196,32 @@ Models.Team.findAll()
       [key1, key2]
     )
   ), true)
-  say('play', "Matches #{MATCHES.length * 2}")
+  say('play', "Matches #{MATCHES.length * 4}")
 
   say('play', "Waiting for processes to settle")
 
   def = Q.defer()
 
-  d = _.after(MATCHES.length * 2, () ->
+  d = _.after(MATCHES.length * 4, () ->
     def.resolve()
   )
 
   setTimeout(() ->
     say('play', "Starting all matches")
+    _.each(MATCHES, (match) ->
+      p1 = PARTICIPANTS[match[0]]
+      p2 = PARTICIPANTS[match[1]]
+
+      run_match(p1, p2, d)
+    )
+
+    _.each(MATCHES, (match) ->
+      p1 = PARTICIPANTS[match[1]]
+      p2 = PARTICIPANTS[match[0]]
+
+      run_match(p1, p2, d)
+    )
+
     _.each(MATCHES, (match) ->
       p1 = PARTICIPANTS[match[0]]
       p2 = PARTICIPANTS[match[1]]

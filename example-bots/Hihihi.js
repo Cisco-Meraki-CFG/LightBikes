@@ -1,4 +1,4 @@
-Bot.register('DummyBot', function(board_state, player_state, move) {
+Bot.register('Hihihi', function(board_state, player_state, move) {
   var me = board_state.me;
   var board = board_state.board;
   var dirs = board.safe_directions(me);
