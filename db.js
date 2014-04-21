@@ -1,10 +1,22 @@
 var Sequelize = require('sequelize');
 
-Sequelize.DB = new Sequelize('database', 'username', 'password', {
-  dialect: 'sqlite',
-  storage: 'db.sqlite',
-  logging: false
-});
+if (process.env.HEROKU_POSTGRESQL_BLUE_URL) {
+  var match = process.env.HEROKU_POSTGRESQL_BLUE_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
+
+  Sequelize.DB = new Sequelize(match[5], match[1], match[2], {
+    dialect: 'postgres',
+    protocol: 'postgres',
+    port: match[4],
+    host: match[3],
+    logging: true
+  });
+} else {
+  Sequelize.DB = new Sequelize('database', 'username', 'password', {
+    dialect: 'sqlite',
+    storage: 'db.sqlite',
+    logging: false
+  });
+}
 
 require('./models');
 
